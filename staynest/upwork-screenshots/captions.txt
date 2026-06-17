@@ -1,0 +1,5 @@
+01-homepage-hero.png — Elegant vacation rental landing page with strong hero section and booking-focused CTA.
+02-property-listings.png — Property listing page showing 4 short-term rental homes with pricing, guests, bedrooms, and bathrooms.
+03-property-detail-gallery.png — Detailed rental page with image gallery, amenities, pricing, location, and guest information.
+04-booking-api-integration.png — Hostaway-style booking and availability section using mock API data to demonstrate integration readiness.
+05-mobile-responsive.png — Responsive mobile layout for smooth browsing on phones and tablets.
