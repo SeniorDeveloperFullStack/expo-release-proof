@@ -1,8 +1,19 @@
-# Expo Release Proof
+# LaunchPilot
 
-Expo Release Proof is a portfolio proof project for preparing an Expo React Native TypeScript app for App Store Connect and Google Play Console submission.
+LaunchPilot is a real Expo React Native TypeScript MVP for managing App Store and Google Play launch workflows.
 
-The app demonstrates a professional release workflow covering project audit, EAS build setup, TestFlight preparation, Android App Bundle preparation, privacy and data safety review, RevenueCat validation, and final submission troubleshooting.
+It helps developers and startup founders track launch readiness across multiple mobile app projects, including Expo project audits, EAS production builds, TestFlight preparation, Android AAB preparation, privacy review, RevenueCat setup, and final submission troubleshooting.
+
+## MVP Features
+
+- Premium dark mobile UI built with Expo and React Native.
+- Dashboard with three sample launch projects: Fitness Tracker App, SaaS Mobile App, and E-commerce App.
+- Project cards with platform, launch status, and live progress percentage.
+- Interactive launch checklist grouped by real App Store and Google Play release stages.
+- Clickable checklist rows with custom checkbox controls.
+- Local checklist persistence using `@react-native-async-storage/async-storage`.
+- Top tab navigation for Dashboard, Checklist, and Premium.
+- Premium feature screen for upgrade concepts such as unlimited projects, checklist export, rejection tracking, and team collaboration.
 
 ## Run Locally
 
@@ -11,23 +22,29 @@ npm install
 npx expo start --web
 ```
 
+You can also use the npm script:
+
+```bash
+npm run web
+```
+
 ## EAS Build Commands
 
-Create a local development client build:
+Create internal development builds:
 
 ```bash
 eas build --profile development --platform ios
 eas build --profile development --platform android
 ```
 
-Create internal preview builds:
+Create preview builds:
 
 ```bash
 eas build --profile preview --platform ios
 eas build --profile preview --platform android
 ```
 
-Create production store builds:
+Create production builds:
 
 ```bash
 eas build --profile production --platform ios
@@ -37,13 +54,13 @@ eas build --profile production --platform all
 
 ## EAS Submit Commands
 
-Submit the latest production iOS build to App Store Connect:
+Submit a production iOS build to App Store Connect:
 
 ```bash
 eas submit --profile production --platform ios
 ```
 
-Submit the latest production Android AAB to Google Play Console:
+Submit a production Android AAB to Google Play Console:
 
 ```bash
 eas submit --profile production --platform android
@@ -55,24 +72,23 @@ Submit both platforms:
 eas submit --profile production --platform all
 ```
 
-## Store Release Checklist
-
-- Confirm the Expo SDK, native permissions, app icons, splash screen, and production environment variables.
-- Verify `ios.bundleIdentifier` is `com.nghian.expo.releaseproof`.
-- Verify `android.package` is `com.nghian.expo.releaseproof` and `android.versionCode` is incremented for each Play Console upload.
-- Prepare screenshots, descriptions, keywords, categories, support URL, marketing URL, and review notes.
-- Complete privacy policy, App Store privacy nutrition labels, Google Play Data Safety, app access, content rating, and target audience forms.
-- Test fresh install, login, logout, restore purchases, offline states, crash-free launch, and review-account access.
-
 ## RevenueCat Checklist
 
-- Create matching products in App Store Connect and Google Play Console.
-- Import or configure those products in RevenueCat.
-- Attach products to the correct offering, package, and entitlement.
-- Confirm entitlement IDs match the app code.
-- Test sandbox purchase, restore purchase, cancellation, expiration, and renewal behavior.
-- Confirm the paywall copy matches store pricing, trial terms, and subscription duration.
+- Create matching subscription or in-app purchase products in App Store Connect and Google Play Console.
+- Add products to RevenueCat and connect them to the correct app.
+- Configure offerings, packages, and entitlement IDs.
+- Confirm entitlement IDs match the application code.
+- Test sandbox purchases, restore purchases, cancellation, expiration, and renewal behavior.
+- Verify paywall copy, trial terms, subscription duration, and pricing match store configuration.
 
-## Release Goal
+## Launch Workflow Covered
 
-The goal of this project is to show a clear, repeatable release-preparation workflow for clients who need help publishing an Expo or React Native application to the Apple App Store and Google Play Store.
+- Expo / React Native project audit
+- EAS production build configuration
+- iOS TestFlight / App Store Connect preparation
+- Android AAB / Google Play Console preparation
+- Privacy policy, data safety, and review checklist
+- RevenueCat products, offerings, and entitlement check
+- Final submission and review troubleshooting
+
+LaunchPilot is an MVP workflow manager. It does not include fake App Store or Google Play links and does not claim the app is already published.

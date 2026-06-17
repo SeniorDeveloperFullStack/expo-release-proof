@@ -1,17 +1,17 @@
 {
   "expo": {
-    "name": "Expo Release Proof",
-    "slug": "expo-release-proof",
+    "name": "LaunchPilot",
+    "slug": "launchpilot",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.nghian.expo.releaseproof"
+      "bundleIdentifier": "com.nghian.launchpilot"
     },
     "android": {
-      "package": "com.nghian.expo.releaseproof",
+      "package": "com.nghian.launchpilot",
       "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
