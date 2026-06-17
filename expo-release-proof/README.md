@@ -1,87 +1,29 @@
 # LaunchPilot
 
-LaunchPilot is a real Expo React Native TypeScript MVP for managing App Store and Google Play launch workflows.
+LaunchPilot is a polished Expo React Native TypeScript MVP for managing App Store and Google Play release workflows.
 
-It helps developers and startup founders track launch readiness across multiple mobile app projects, including Expo project audits, EAS production builds, TestFlight preparation, Android AAB preparation, privacy review, RevenueCat setup, and final submission troubleshooting.
+The app is designed as a client-ready SaaS/mobile dashboard for developers, founders, and startup teams preparing mobile releases. It tracks Expo/EAS build readiness, store metadata, privacy and policy tasks, RevenueCat subscription setup, review risk, and final submission milestones.
 
-## MVP Features
+## What It Includes
 
-- Premium dark mobile UI built with Expo and React Native.
-- Dashboard with three sample launch projects: Fitness Tracker App, SaaS Mobile App, and E-commerce App.
-- Project cards with platform, launch status, and live progress percentage.
-- Interactive launch checklist grouped by real App Store and Google Play release stages.
-- Clickable checklist rows with custom checkbox controls.
-- Local checklist persistence using `@react-native-async-storage/async-storage`.
-- Top tab navigation for Dashboard, Checklist, and Premium.
-- Premium feature screen for upgrade concepts such as unlimited projects, checklist export, rejection tracking, and team collaboration.
+- Premium dark UI with gradient cards, rounded surfaces, clean spacing, and subtle glass-style panels.
+- Mobile-first layout that also works well with `npx expo start --web`.
+- Simple in-file tab state for Dashboard, Checklist, Timeline, Premium, and Settings.
+- New project modal with app name, platform, and release type controls.
+- Local persistence with AsyncStorage for onboarding, saved projects, and checked checklist items.
+- Reusable UI components: `StatCard`, `ProjectCard`, `ProgressBar`, `ChecklistSectionCard`, `BottomTabButton`, and `GradientButton`.
+- `lucide-react-native` icons and `expo-linear-gradient` styling.
 
-## Run Locally
+## Screens
 
-```bash
-npm install
-npx expo start --web
-```
+- Onboarding welcome screen for LaunchPilot.
+- Dashboard with active projects, average readiness, pending tasks, review risk, deadlines, and project cards.
+- Checklist detail screen with release sections and clickable checkbox tasks.
+- Timeline screen covering code freeze, builds, testing, metadata, review submission, and approval/release.
+- Premium screen for the LaunchPilot Pro concept.
+- Settings screen with profile, app version, release mode, export, privacy, and support placeholders.
 
-You can also use the npm script:
-
-```bash
-npm run web
-```
-
-## EAS Build Commands
-
-Create internal development builds:
-
-```bash
-eas build --profile development --platform ios
-eas build --profile development --platform android
-```
-
-Create preview builds:
-
-```bash
-eas build --profile preview --platform ios
-eas build --profile preview --platform android
-```
-
-Create production builds:
-
-```bash
-eas build --profile production --platform ios
-eas build --profile production --platform android
-eas build --profile production --platform all
-```
-
-## EAS Submit Commands
-
-Submit a production iOS build to App Store Connect:
-
-```bash
-eas submit --profile production --platform ios
-```
-
-Submit a production Android AAB to Google Play Console:
-
-```bash
-eas submit --profile production --platform android
-```
-
-Submit both platforms:
-
-```bash
-eas submit --profile production --platform all
-```
-
-## RevenueCat Checklist
-
-- Create matching subscription or in-app purchase products in App Store Connect and Google Play Console.
-- Add products to RevenueCat and connect them to the correct app.
-- Configure offerings, packages, and entitlement IDs.
-- Confirm entitlement IDs match the application code.
-- Test sandbox purchases, restore purchases, cancellation, expiration, and renewal behavior.
-- Verify paywall copy, trial terms, subscription duration, and pricing match store configuration.
-
-## Launch Workflow Covered
+## Release Workflow Covered
 
 - Expo / React Native project audit
 - EAS production build configuration
@@ -91,4 +33,53 @@ eas submit --profile production --platform all
 - RevenueCat products, offerings, and entitlement check
 - Final submission and review troubleshooting
 
-LaunchPilot is an MVP workflow manager. It does not include fake App Store or Google Play links and does not claim the app is already published.
+## Run Locally
+
+```bash
+npm install
+npx expo start --web
+```
+
+You can also run:
+
+```bash
+npm run web
+```
+
+## EAS Build Commands
+
+Development builds:
+
+```bash
+eas build --profile development --platform ios
+eas build --profile development --platform android
+```
+
+Preview builds:
+
+```bash
+eas build --profile preview --platform ios
+eas build --profile preview --platform android
+```
+
+Production builds:
+
+```bash
+eas build --profile production --platform ios
+eas build --profile production --platform android
+eas build --profile production --platform all
+```
+
+## EAS Submit Commands
+
+```bash
+eas submit --profile production --platform ios
+eas submit --profile production --platform android
+eas submit --profile production --platform all
+```
+
+## Notes
+
+LaunchPilot is an MVP workflow manager and portfolio-ready product demo. It does not include fake App Store or Google Play links, does not use fake client names, and does not claim the app is already published.
+
+The Premium screen is a demo payment screen only. No real payment is processed.
